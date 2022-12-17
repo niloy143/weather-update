@@ -14,7 +14,6 @@ const Weather = () => {
         fetch(`https://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_apiKey}&q=${capital}`)
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 setWeather(data);
                 setLoading(false);
             })
